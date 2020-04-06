@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--  
+    Tìm hiểu các method của document:
+    - getElementsByClassName
+    - getElementsByTagName
+    - querySelector
+    - querySelectorAll
+    -->
+
+    - getElementsByClassName: Get all elements with the specified class name: document. var x = document.getElementsByClassName("example");<br>
+    - getElementsByTagName: Get all elements with the specified tag name. var x = document.getElementsByTagName("li");<br>
+    - querySelector: Get the first element in the document with specified class name: var x = document.querySelector("example");<br>
+    - querySelectorAll: Get all elements in the document with specified class name: var x = document.querySelectorAll("example");<br>
+
+    <!-- 
+    1. Property nào của document lưu tham chiếu tới các <img> tags trong trang web
+    2. Sử dụng inspector để xem constructor function của một <img> có tên là gì
+    -->
+
+    <img src="https://images.befunky.com/wp/wp-2014-08-milky-way-1023340_1280.jpg" alt="demo">
+    <script>
+        console.log(document.images);
+        console.log(document.images.constructor);
+    </script>
+</body>
+</html>
