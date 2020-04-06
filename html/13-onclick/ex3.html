@@ -12,10 +12,12 @@
 
     <script>
         var btn = document.getElementsByTagName("button")[0]
-        btn.onclick = () => {
+        btn.addEventListener("click", () => {
             var name = document.getElementById("name");
+            console.log("here");
             alert(`Hi, ${name.value}`)
-        }
+        })
+        btn.addEventListener('click', () => console.log("Test"));
     </script>
 </body>
 </html>
