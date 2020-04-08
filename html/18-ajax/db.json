@@ -1,0 +1,14 @@
+{
+    "members": [
+        {
+            "id": 1,
+            "name" : "Nguyen A",
+            "age": "20"
+        },
+        {
+            "id": 2,
+            "name" : "Tran B",
+            "age": "18"
+        }
+    ]
+}

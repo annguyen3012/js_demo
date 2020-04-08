@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body></body>
+    <script>
+        url = "https://randomuser.me/api/"
+        axios.get(url)
+        .then((response) => {
+            data = response.data.results[0]
+            document.write(`<p>FullName: ${data.name.title} ${data.name.first} ${data.name.last}</p>`);                 
+            document.write(`<p>Gender: ${data.gender}</p>`);                 
+            document.write(`<p>Location: ${data.location.street.number} ${data.location.street.name}, ${data.location.city}, ${data.location.country}</p>`);                 
+            document.write(`<p>Email: ${data.email}</p>`);                 
+            document.write(`<p>Phone: ${data.phone}</p>`);                 
+            document.write(`<p>Cell: ${data.cell}</p>`);                 
+            document.write(`<img src="${data.picture.medium}" alt="">`);                 
+        });
+        // fetch(url)
+        // .then(res => res.json())
+        // .then((response) => {
+        //     data = response.results[0]
+        //     document.write(`<p>FullName: ${data.name.title} ${data.name.first} ${data.name.last}</p>`);                 
+        //     document.write(`<p>Gender: ${data.gender}</p>`);                 
+        //     document.write(`<p>Location: ${data.location.street.number} ${data.location.street.name}, ${data.location.city}, ${data.location.country}</p>`);                 
+        //     document.write(`<p>Email: ${data.email}</p>`);                 
+        //     document.write(`<p>Phone: ${data.phone}</p>`);                 
+        //     document.write(`<p>Cell: ${data.cell}</p>`);                 
+        //     document.write(`<img src="${data.picture.medium}" alt="">`);                 
+        // })
+    </script>
+</body>
+</html>
