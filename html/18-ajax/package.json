@@ -2,16 +2,19 @@
   "name": "18-ajax",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "json-server": "json-server -w db.json --no-cors",
+    "start": "node server.js",
     "dev": "lite-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.16.1",
-    "lite-server": "^2.5.4"
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lite-server": "^2.5.4",
+    "nodemon": "^2.0.3"
   }
 }
