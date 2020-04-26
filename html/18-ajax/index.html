@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Ajax</title>
+    <style>
+        #form-edit-member {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Members List</h3>  
+    <table id="member-list">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Option</th>
+            </tr>
+        </thead>
+       <tbody>
+       </tbody>
+    </table>
+    <br>
+    <form action='/member' method="POST" id="form-add-member">
+        <div style="margin-bottom: 5px">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="name" placeholder="Name">
+        </div>
+        <div>
+            <label for="fage">Last name:</label>
+            <input type="text" id="fage" name="age" placeholder="Age">
+        </div>
+        <button type="submit">Add member</button>
+    </form>
+
+    <form action='' method="PUT" id="form-edit-member" hidden>
+        <div style="margin-bottom: 5px">
+            <label for="fname-edit">First name:</label>
+            <input type="text" id="fname-edit" name="name" placeholder="Name">
+        </div>
+        <div>
+            <label for="fage-edit">Last name:</label>
+            <input type="text" id="fage-edit" name="age" placeholder="Age">
+        </div>
+        <button type="submit">Edit member</button>
+    </form>
+   
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="./client.js"></script>
+</body>
+</html>
