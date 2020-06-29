@@ -1,0 +1,14 @@
+{"data":[
+    {"id":1,"name":"Nguyen A","role":"Admin", "created_at": "2020/06/12","status": "Inactive","email": "nguyena@gmail.com", "avatar": "avatar1.png"},
+    {"id":2,"name":"Tran B","role":"Member", "created_at": "2020/06/12","status": "Active","email": "tranb@gmail.com", "avatar": "avatar2.png"},
+    {"id":3,"name":"Nguyen A","role":"Admin", "created_at": "2020/06/12","status": "Inactive","email": "nguyena@gmail.com", "avatar": "avatar3.png"},
+    {"id":4,"name":"Tran B","role":"Member", "created_at": "2020/06/12","status": "Active","email": "tranb@gmail.com", "avatar": "avatar4.png"},
+    {"id":5,"name":"Nguyen A","role":"Admin", "created_at": "2020/06/12","status": "Inactive","email": "nguyena@gmail.com", "avatar": "avatar5.png"},
+    {"id":6,"name":"Tran B","role":"Member", "created_at": "2020/06/12","status": "Active","email": "tranb@gmail.com", "avatar": "avatar6.png"},
+    {"id":7,"name":"Nguyen A","role":"Admin", "created_at": "2020/06/12","status": "Inactive","email": "nguyena@gmail.com", "avatar": "avatar7.png"},
+    {"id":8,"name":"Tran B","role":"Member", "created_at": "2020/06/12","status": "Active","email": "tranb@gmail.com", "avatar": "avatar8.png"},
+    {"id":9,"name":"Nguyen A","role":"Admin", "created_at": "2020/06/12","status": "Inactive","email": "nguyena@gmail.com", "avatar": "avatar1.png"},
+    {"id":10,"name":"Tran B","role":"Member", "created_at": "2020/06/12","status": "Active","email": "tranb@gmail.com", "avatar": "avatar2.png"},
+    {"id":11,"name":"Nguyen A","role":"Admin", "created_at": "2020/06/12","status": "Inactive","email": "nguyena@gmail.com", "avatar": "avatar3.png"}
+    ]
+}
