@@ -3,6 +3,8 @@ const app = express();
 const fs = require('fs');
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+var multer  = require('multer')
+
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,6 +18,18 @@ app.use(methodOverride(function (req, res) {
     }
 }))
 
+// SET STORAGE
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads')
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now())
+    }
+  })
+   
+var upload = multer({ storage: storage })
+
 members = [];
 app.get('/', (req, res) => {
     // res.json(members);
@@ -26,16 +40,16 @@ app.get('/create-user', (req, res) => {
     res.render('create-user');
 });
 
-app.post('/create-user', (req, res) => {
-    console.log(req.body.name)
-    // member = {
-    //     id: 1,
-    //     name: req.body.name,
-    //     email: req.body.email,
-    //     avatar: req.file,
-    //     role: email.req.body.role
-    // }
-    // console.log(member);
+app.post('/create-user', upload.single('avatar'), (req, res, next) => {
+    member = {
+        id: 1,
+        name: req.body.name,
+        email: req.body.email,
+        avatar: req.file,
+        role: req.body.role
+    }
+    
+    console.log(member);
     // if (members.data) {
     //     length = members.data.length;
     //     member.id = members.data[length - 1].id + 1;
@@ -44,7 +58,9 @@ app.post('/create-user', (req, res) => {
     // } else {
     //     members.data = member  
     // }
-    // const googleDriver = require('./google-driver')
+    const googleDriver = require('./google-driver')
+    console.log('ahihihihi', req.file)
+    googleDriver.sendFile(req.file)
     // fs.writeFileSync('./db.json',JSON.stringify(members))
     // res.json(members);    
 });
